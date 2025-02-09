@@ -12,7 +12,7 @@ import useDesigner from "../hooks/useDesigner";
 
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
 import { Switch } from "../ui/switch";
-import { ChromePicker } from "react-color"; // Import the color picker
+import { ChromePicker, ColorResult } from "react-color"; // Import the color picker
 import { cn } from "@/lib/utils";
 
 const type: ElementsType = "TextField";
@@ -156,7 +156,7 @@ function PropertiesComponent({ elementInstance }: { elementInstance: FormElement
     });
   }
 
-  const handleColorChange = (color) => {
+  const handleColorChange = (color: ColorResult) => {
     form.setValue("backgroundColor", color.hex);
     applyChanges({
       ...form.getValues(),

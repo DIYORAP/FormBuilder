@@ -18,7 +18,7 @@ import { Calendar } from "../ui/calendar";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Switch } from "../ui/switch";
-import { ChromePicker } from "react-color";
+import { ChromePicker, ColorResult } from "react-color";
 
 const type: ElementsType = "DateField";
 
@@ -179,7 +179,7 @@ function PropertiesComponent({ elementInstance }: { elementInstance: FormElement
             },
         });
     }
-    const handleColorChange = (color) => {
+    const handleColorChange = (color: ColorResult) => {
         form.setValue("backgroundColor", color.hex);
         applyChanges({
             ...form.getValues(),

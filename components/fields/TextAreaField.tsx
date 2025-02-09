@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect, useState } from "react";
 import useDesigner from "../hooks/useDesigner";
-import { ChromePicker } from "react-color";
+import { ChromePicker, ColorResult } from "react-color";
 
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
 import { Switch } from "../ui/switch";
@@ -103,7 +103,7 @@ function FormComponent({
 
     const { label, required, placeHolder, helperText, rows } = element.extraAttributes;
     return (
-        <div className="flex flex-col gap-2 w-full" style={{ backgroundColor }}>
+        <div className="flex flex-col gap-2 w-full" style={{ backgroundColor: element.extraAttributes.backgroundColor }}>
             <Label className={cn(error && "text-red-500")}>
                 {label}
                 {required && "*"}
@@ -163,7 +163,7 @@ function PropertiesComponent({ elementInstance }: { elementInstance: FormElement
             },
         });
     }
-    const handleColorChange = (color) => {
+    const handleColorChange = (color: ColorResult) => {
         form.setValue("backgroundColor", color.hex);
         applyChanges({
             ...form.getValues(),

@@ -127,7 +127,7 @@
 import { ElementsType, FormElement, FormElementInstance } from "../FormElements";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
-import { ChromePicker } from "react-color";
+import { ChromePicker, ColorResult } from "react-color";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -221,7 +221,7 @@ function PropertiesComponent({ elementInstance }: { elementInstance: FormElement
         });
     }
 
-    const handleColorChange = (color) => {
+    const handleColorChange = (color: ColorResult) => {
         form.setValue("backgroundColor", color.hex);
         applyChanges({
             ...form.getValues(),

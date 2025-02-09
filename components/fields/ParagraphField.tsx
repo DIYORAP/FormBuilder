@@ -11,7 +11,7 @@ import useDesigner from "../hooks/useDesigner";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
 import { BsTextParagraph } from "react-icons/bs";
 import { Textarea } from "../ui/textarea";
-import { ChromePicker } from "react-color";
+import { ChromePicker, ColorResult } from "react-color";
 
 const type: ElementsType = "ParagraphField";
 
@@ -98,7 +98,7 @@ function PropertiesComponent({ elementInstance }: { elementInstance: FormElement
         });
     }
 
-    const handleColorChange = (color) => {
+    const handleColorChange = (color: ColorResult) => {
         form.setValue("backgroundColor", color.hex);
         applyChanges({
             ...form.getValues(),

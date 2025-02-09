@@ -7,7 +7,7 @@ import { z } from "zod";
 import { ElementsType, FormElement, FormElementInstance } from "../FormElements";
 import useDesigner from "../hooks/useDesigner";
 import { Input } from "../ui/input";
-import { ChromePicker } from "react-color";
+import { ChromePicker, ColorResult } from "react-color";
 import { Label } from "../ui/label";
 import { LuHeading2 } from "react-icons/lu";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
@@ -92,7 +92,7 @@ function PropertiesComponent({ elementInstance }: { elementInstance: FormElement
         });
     }
 
-    const handleColorChange = (color) => {
+    const handleColorChange = (color: ColorResult) => {
         form.setValue("backgroundColor", color.hex);
         applyChanges({
             ...form.getValues(),

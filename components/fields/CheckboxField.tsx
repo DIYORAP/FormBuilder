@@ -9,7 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect, useState } from "react";
 import useDesigner from "../hooks/useDesigner";
 import { IoMdCheckbox } from "react-icons/io";
-import { ChromePicker } from "react-color";
+import { ChromePicker, ColorResult } from "react-color";
 
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
 import { Switch } from "../ui/switch";
@@ -163,7 +163,7 @@ function PropertiesComponent({ elementInstance }: { elementInstance: FormElement
         });
     }
 
-    const handleColorChange = (color) => {
+    const handleColorChange = (color: ColorResult) => {
         form.setValue("backgroundColor", color.hex);
         applyChanges({
             ...form.getValues(),

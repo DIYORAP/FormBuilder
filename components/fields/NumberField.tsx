@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 import { Bs123 } from "react-icons/bs";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
 import { Switch } from "../ui/switch";
-import { ChromePicker } from "react-color";
+import { ChromePicker, ColorResult } from "react-color";
 const type: ElementsType = "NumberField";
 
 const extraAttributes = {
@@ -154,7 +154,7 @@ function PropertiesComponent({ elementInstance }: { elementInstance: FormElement
             },
         });
     }
-    const handleColorChange = (color) => {
+    const handleColorChange = (color: ColorResult) => {
         form.setValue("backgroundColor", color.hex);
         applyChanges({
             ...form.getValues(),

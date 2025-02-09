@@ -16,7 +16,7 @@ const type: ElementsType = "SubTitleField";
 
 const extraAttributes = {
     title: "SubTitle field",
-    backgroundColor: "#ffffff"
+    backgroundColor: ""
 };
 
 const propertiesSchema = z.object({

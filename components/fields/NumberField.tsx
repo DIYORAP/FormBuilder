@@ -21,7 +21,7 @@ const extraAttributes = {
     helperText: "Helper text",
     required: false,
     placeHolder: "0",
-    backgroundColor: "#ffffff",
+    backgroundColor: "",
 };
 
 const propertiesSchema = z.object({

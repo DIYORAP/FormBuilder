@@ -22,7 +22,7 @@ const extraAttributes = {
   helperText: "Helper text",
   required: false,
   placeHolder: "Value here...",
-  backgroundColor: "#ffffff", // Default background color
+  backgroundColor: "", // Default background color
 };
 
 const propertiesSchema = z.object({

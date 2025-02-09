@@ -17,7 +17,7 @@ const type: ElementsType = "ParagraphField";
 
 const extraAttributes = {
     text: "Text here",
-    backgroundColor: "#ffffff",
+    backgroundColor: "",
 };
 
 const propertiesSchema = z.object({

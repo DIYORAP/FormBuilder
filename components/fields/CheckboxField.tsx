@@ -22,7 +22,7 @@ const extraAttributes = {
     label: "Checkbox field",
     helperText: "Helper text",
     required: false,
-    backgroundColor: "#ffffff",
+    backgroundColor: "",
 };
 
 const propertiesSchema = z.object({

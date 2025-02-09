@@ -26,7 +26,7 @@ const extraAttributes = {
     label: "Date field",
     helperText: "Pick a date",
     required: false,
-    backgroundColor: "#ffffff",
+    backgroundColor: "",
 };
 
 const propertiesSchema = z.object({

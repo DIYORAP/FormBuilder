@@ -141,7 +141,7 @@ const type: ElementsType = "TitleField";
 
 const extraAttributes = {
     title: "Title field",
-    backgroundColor: "#ffffff", // Default background color
+    backgroundColor: "", // Default background color
 };
 
 const propertiesSchema = z.object({

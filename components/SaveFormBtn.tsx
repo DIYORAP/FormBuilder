@@ -22,7 +22,7 @@ function SaveFormBtn() {
                     description: "Your form has been saved",
                 });
                 setLoading(false);
-            }, 1000);
+            }, 500);
         } catch (error) {
             toast({
                 title: "Error",

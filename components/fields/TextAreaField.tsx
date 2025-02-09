@@ -25,7 +25,7 @@ const extraAttributes = {
     required: false,
     placeHolder: "Value here...",
     rows: 3,
-    backgroundColor: "#ffffff",
+    backgroundColor: "",
 };
 
 const propertiesSchema = z.object({

@@ -17,7 +17,7 @@ function FormBuilder() {
     const params = useParams();
     console.log(params);
     const [form, setForm] = useState({
-        id: "1",
+        id: 1,
         name: "Sample Form",
         content: "[]",
         published: false,
@@ -72,7 +72,7 @@ function FormBuilder() {
                         {!form.published && (
                             <>
                                 <SaveFormBtn />
-                                <PublishFormBtn />
+                                <PublishFormBtn id={form.id} />
                             </>
                         )}
                     </div>
